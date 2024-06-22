@@ -8,7 +8,7 @@
   <name>Citrus Integration Test</name>
 
   <properties>
-    <java.version>11</java.version>
+    <java.version>17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <citrus.version>3.4.0</citrus.version>
@@ -42,7 +42,7 @@
     <dependency>
       <groupId>com.consol.citrus</groupId>
       <artifactId>citrus-testng</artifactId>
-      <version>${project.version}</version>
+      <version>${citrus.version}</version>
     </dependency>
 
     <dependency>
@@ -69,7 +69,7 @@
         <artifactId>citrus-maven-plugin</artifactId>
         <version>${citrus.version}</version>
         <configuration>
-            <targetPackage>ra.badretdinov</targetPackage>
+<!--            <targetPackage>ra.badretdinov</targetPackage>-->
         </configuration>
       </plugin>
 
