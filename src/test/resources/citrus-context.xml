@@ -27,8 +27,12 @@
 
     <citrus-http:client
             id="restClientReqres"
-            request-url="${url}"
+            request-url="${base.url}"
             content-type="application/json"
             timeout="15000"/>
+
+    <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper">
+        <property name="serializationInclusion" value="NON_NULL"/>
+    </bean>
 
 </beans>
