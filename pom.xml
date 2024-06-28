@@ -11,11 +11,12 @@
     <java.version>17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <citrus.version>3.4.0</citrus.version>
+    <citrus.version>3.2.1</citrus.version>
     <slf4j.version>1.7.30</slf4j.version>
     <log4j2.version>2.15.0</log4j2.version>
     <lombok.version>1.18.32</lombok.version>
     <javafaker.version>1.0.2</javafaker.version>
+    <jakarta.xml.ws.api.version>2.3.2</jakarta.xml.ws.api.version>
   </properties>
 
   <dependencies>
@@ -73,6 +74,11 @@
       <artifactId>javafaker</artifactId>
       <version>${javafaker.version}</version>
     </dependency>
+    <dependency>
+      <groupId>jakarta.xml.ws</groupId>
+      <artifactId>jakarta.xml.ws-api</artifactId>
+      <version>${jakarta.xml.ws.api.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -119,6 +125,31 @@
           </execution>
         </executions>
       </plugin>
+
+    <!-- mvn generate-sources - генерация с pojo с сайта, указанный в wsdl  -->
+      <plugin>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-codegen-plugin</artifactId>
+        <version>3.3.4</version>
+        <executions>
+          <execution>
+            <id>generate-sources-api</id>
+            <phase>generate-sources</phase>
+            <configuration>
+              <sourceRoot>${basedir}/src/test/java</sourceRoot>
+              <wsdlOptions>
+                <wsdlOption>
+                  <wsdl>https://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL</wsdl>
+                </wsdlOption>
+              </wsdlOptions>
+            </configuration>
+            <goals>
+              <goal>wsdl2java</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
     </plugins>
   </build>
 </project>

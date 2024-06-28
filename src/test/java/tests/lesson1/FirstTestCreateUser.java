@@ -1,4 +1,4 @@
-package tests;
+package tests.lesson1;
 
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.context.TestContext;
@@ -6,10 +6,6 @@ import com.consol.citrus.message.MessageType;
 import com.consol.citrus.message.builder.ObjectMappingPayloadBuilder;
 import com.consol.citrus.testng.spring.TestNGCitrusSpringSupport;
 import dto.CreateUserRsDTO;
-import dto.Data;
-import dto.Support;
-import dto.UserDTO;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.testng.annotations.Test;
 

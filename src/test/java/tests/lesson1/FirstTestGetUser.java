@@ -1,4 +1,4 @@
-package tests;
+package tests.lesson1;
 
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.context.TestContext;
