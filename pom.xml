@@ -126,29 +126,29 @@
         </executions>
       </plugin>
 
-    <!-- mvn generate-sources - генерация с pojo с сайта, указанный в wsdl  -->
-      <plugin>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-codegen-plugin</artifactId>
-        <version>3.3.4</version>
-        <executions>
-          <execution>
-            <id>generate-sources-api</id>
-            <phase>generate-sources</phase>
-            <configuration>
-              <sourceRoot>${basedir}/src/test/java</sourceRoot>
-              <wsdlOptions>
-                <wsdlOption>
-                  <wsdl>https://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL</wsdl>
-                </wsdlOption>
-              </wsdlOptions>
-            </configuration>
-            <goals>
-              <goal>wsdl2java</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<!--    &lt;!&ndash; mvn generate-sources - генерация с pojo с сайта, указанный в wsdl  &ndash;&gt;-->
+<!--      <plugin>-->
+<!--        <groupId>org.apache.cxf</groupId>-->
+<!--        <artifactId>cxf-codegen-plugin</artifactId>-->
+<!--        <version>3.3.4</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>generate-sources-api</id>-->
+<!--            <phase>generate-sources</phase>-->
+<!--            <configuration>-->
+<!--              <sourceRoot>${basedir}/src/test/java</sourceRoot>-->
+<!--              <wsdlOptions>-->
+<!--                <wsdlOption>-->
+<!--                  <wsdl>https://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL</wsdl>-->
+<!--                </wsdlOption>-->
+<!--              </wsdlOptions>-->
+<!--            </configuration>-->
+<!--            <goals>-->
+<!--              <goal>wsdl2java</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
 
     </plugins>
   </build>
