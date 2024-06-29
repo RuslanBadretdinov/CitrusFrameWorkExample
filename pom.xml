@@ -41,11 +41,33 @@
       <artifactId>citrus-http</artifactId>
       <version>${citrus.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.consol.citrus</groupId>
+      <artifactId>citrus-websocket</artifactId>
+      <version>${citrus.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>com.consol.citrus</groupId>
       <artifactId>citrus-testng</artifactId>
       <version>${citrus.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.consol.citrus</groupId>
+      <artifactId>citrus-java-dsl</artifactId>
+      <version>${citrus.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm.mq</groupId>
+      <artifactId>com.ibm.mq.allclient</artifactId>
+      <version>9.2.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.5</version>
     </dependency>
 
     <dependency>
